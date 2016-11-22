@@ -1,1 +1,5 @@
+# Uncommenting the following line leads to duplicated class error in Gradle builds
+src: src,.apt_generated
+
 -buildpath: org.immutables.value-2.3.8.jar;version=file
+
