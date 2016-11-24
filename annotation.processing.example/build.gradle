@@ -1,0 +1,16 @@
+apply plugin: 'java'
+
+sourceSets {
+  main {
+    java {
+      srcDirs -= [ project.file('.apt_generated') ]
+    }
+    resources {
+      srcDirs -= [ project.file('.apt_generated') ]
+    }
+  }
+}
+
+compileJava {
+  options.compilerArgs.addAll([ '-s', project.file('.apt_generated') ])
+}
